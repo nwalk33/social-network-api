@@ -1,32 +1,19 @@
-// import router from express
 const router = require('express').Router();
 
-// import User Controllers
 const {
     getUsers,
-    getUserByID,
-    createUser,
-    updateUserByID,
-    deleteUserByID,
-    AddFriendByID,
-    DeleteFriendByID
-} = require('../../controller/userController');
+    createUser, 
+    getSingleUser,
+    updateUser,
+    deleteUser,
+    addFriend,
+    deleteFriend
 
-// API GET POST routes for User /api/users
-router.route('/')
-.get(getUsers)
-.post(createUser);
+} = require ('../../controllers/userController');
+router.route('/').get(getUsers).post(createUser);
 
-// API GET PUT DELETE routes for User with ID params /api/users/:id
-router.route('/:id')
-.get(getUserByID)
-.put(updateUserByID)
-.delete(deleteUserByID);
+router.route('/:userId').get(getSingleUser).put(updateUser).delete(deleteUser);
 
-// API POST DELETE routes for User with ID params /api/users/:id
-router.route('/:id/friends/:friendID')
-.post(AddFriendByID)
-.delete(DeleteFriendByID);
+router.route ('/:userId/friends/:friendId').post(addFriend).delete(deleteFriend);
 
-// export module as router
 module.exports = router;

@@ -1,9 +1,7 @@
-// import Router from express
 const router = require('express').Router();
-// import all API routes
+
 const apiRoutes = require('./api')
 
-// Use Middleware for apiRoutes
 router.use('/api', apiRoutes);
 
 router.use(async (req, res) => {

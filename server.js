@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // require express
 const express = require('express');
 // require config connection
-const db = require('./config/connections');
+const db = require('./config/connection');
 // require routes/api
 const routes = require('./routes');
 // use app as express method
