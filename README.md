@@ -8,6 +8,8 @@
 4. [Links](#links)
 5. [Questions](#questions)
 
+![image](https://github.com/nwalk33/social-network-api/assets/124389890/889044ac-fa8b-49f5-bc11-155d7995399f)
+
 # Description <a name="description"></a>
 This repository contains an API for a social network web application built using MongoDB, Express.js, and Mongoose. The API allows users to share their thoughts, react to friends' thoughts, and manage their friend list.
 
